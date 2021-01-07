@@ -1,5 +1,27 @@
 # VBA-challenge
-Summary_Table_Row = 2
+Sub stock_data()
+
+
+
+    'Create Summary Table
+    Range("I1").Value = "Ticker"
+    Range("J1").Value = "Yearly Change"
+    Range("K1").Value = "Percent Change"
+    Range("L1").Value = "Total Stock Volume"
+    
+
+     ' initialize variables
+      Dim ticker_name As String
+      Dim open_price As Double
+      Dim close_price As Double
+      Dim percent_change As Double
+      Dim yearly_change As Double
+      Dim total_stock_volume As LongLong
+      Dim Summary_Table_Row As Integer
+      Dim Last_Row As Long
+    
+      'initialize variables
+      Summary_Table_Row = 2
       Last_Row = Cells(Rows.Count, "A").End(xlUp).Row
       open_price = Cells(2, 3).Value
         
